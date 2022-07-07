@@ -1,16 +1,15 @@
-import logo from "./logo.svg";
 import "./App.css";
 /** react-router-dom */
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Main from "./components/pages/main";
-import Login from "./components/pages/login";
+import Drink from "./components/pages/drink";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/main" element={<Main />}></Route>
-        <Route path="/login" element={<Login />}></Route>
+        <Route path="/drink" element={<Drink />}></Route>
       </Routes>
     </BrowserRouter>
   );
