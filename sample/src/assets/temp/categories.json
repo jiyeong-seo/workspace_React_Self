@@ -1,0 +1,34 @@
+[
+  {
+    "categoryName": "Animation",
+    "categoryCode": "animation"
+  },
+  {
+    "categoryName": "Branding",
+    "categoryCode": "branding"
+  },
+  {
+    "categoryName": "Illustration",
+    "categoryCode": "illustration"
+  },
+  {
+    "categoryName": "Mobile",
+    "categoryCode": "mobile"
+  },
+  {
+    "categoryName": "Print",
+    "categoryCode": "print"
+  },
+  {
+    "categoryName": "Product Design",
+    "categoryCode": "productDesign"
+  },
+  {
+    "categoryName": "Typography",
+    "categoryCode": "typography"
+  },
+  {
+    "categoryName": "Web Design",
+    "categoryCode": "webDesign"
+  }
+]
