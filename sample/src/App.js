@@ -234,7 +234,17 @@ export default function App() {
                     {siteMap.map((site) => {
                       return (
                         <Col flex={`20%`}>
-                          <SiteItem site={site} />
+                          {site.siteMapArea.map((item) => {
+                            // 전달한 데이터의 키 값의 자유로운 변경을 위해 props 정의
+                            return (
+                              <SiteItem
+                                data={item}
+                                title="areaName"
+                                listName="name"
+                                listLink="link"
+                              />
+                            );
+                          })}
                         </Col>
                       );
                     })}

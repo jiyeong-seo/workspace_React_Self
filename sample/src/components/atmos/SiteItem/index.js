@@ -1,43 +1,43 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function SiteItem({ site }) {
+export default function SiteItem({ data, title, listName, listLink }) {
   return (
-    <div>
-      {site.siteMapArea.map((area) => {
-        return (
-          <SiteListItem>
-            <li className="site-item-title">{area.areaName}</li>
-            {area.children.map((child) => {
-              return (
-                <li>
-                  <a className="site-item" href={child.link} target="_blank">
-                    {child.name}
-                  </a>
-                </li>
-              );
-            })}
-          </SiteListItem>
-        );
-      })}
-    </div>
+    <SiteItemWrap>
+      <ul>
+        <li className="title">{data[title]}</li>
+        {data.children.map((child) => {
+          console.log(child);
+          return (
+            <li>
+              <a href={child[listLink]} target="_blank">
+                {child[listName]}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </SiteItemWrap>
   );
 }
 
-const SiteListItem = styled.ul`
-  li {
-    list-style: none;
-    .site-item {
-      display: block;
-      color: #3d3d4e;
-      margin-top: 16px;
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 20px;
+const SiteItemWrap = styled.div`
+  ul {
+    li {
+      list-style-type: none;
+
+      a {
+        display: inline-block;
+        margin-top: 20px;
+        color: #3d3d4e;
+      }
     }
-  }
-  .site-item-title {
-    font-weight: 700;
-    color: #000;
+
+    .title {
+      font-weight: 900;
+      a {
+        color: #000;
+      }
+    }
   }
 `;
